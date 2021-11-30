@@ -1,1 +1,14 @@
 @import "custom";
+
+
+#more-svg:hover {
+    cursor: pointer;
+}
+/* chorme opera safari */
+.no-scrollbar::-webkit-scrollbar {
+    display:none;
+}
+/* firefox */
+.no-scrollbar {
+    scrollbar-width:none;
+}

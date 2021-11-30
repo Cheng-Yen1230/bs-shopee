@@ -1,1 +1,190 @@
+
+@import "../node_modules/bootstrap/scss/functions";
+
+// $custom-color: (
+//     "navbar-bg": #fb5830
+// );
+
+// $theme-colors: map-merge($theme-colors, $custom-color);
+
+$primary: #f05630;
+$secondary: #FA592F;
+$success: #e9ecef;
+$info: tint-color(green, 40%);
+$position-values: (
+  0: 0,
+  15: 15%,
+  20: 20%,
+  25: 25%,
+  30: 30%,
+  40: 40%,
+  50: 50%,
+  100: 100%
+);
+
+@import "../node_modules/bootstrap/scss/variables";
+
+$font-sizes:map-merge($font-sizes, (7: $font-size-base * 0.8));
+
+
+@import "../node_modules/bootstrap/scss/utilities";
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "cursor": (
+      property: cursor,
+      class: cursor,
+      responsive: true,
+      values: auto pointer grab,
+    ),
+    "transform": (
+        property: transform,
+        responsive: true,
+        values: (rotate-180: rotate(180deg))
+    ),
+    transition: (
+        property: transition,
+        responsive: true,
+        values: (
+            transform: transform 0.2s
+        )
+    )
+  )
+);
+
+// padding-top
+
+$utilities: map-merge(
+    $utilities,
+    (
+       'padding-top':
+        map-merge(
+            map-get($utilities, 'padding-top'),
+            (
+                responsive: true,
+                values: 
+                    map-merge(
+                        map-get(map-get($utilities, 'padding-top'), 'values'),
+                        (
+                            '130': 130px,
+                            '128': 128px,
+                        )
+                    )
+            )
+        )
+    )
+);
+
+// height
+
+$utilities: map-merge(
+    $utilities,
+    (
+       'height':
+        map-merge(
+            map-get($utilities, 'height'),
+            (
+                responsive: true,
+                values: 
+                    map-merge(
+                        map-get(map-get($utilities, 'height'), 'values'),
+                        (
+                            '300': 300px,
+                            '220': 220px,
+                            '114': 114px,
+                            '235': 235px,
+                            '238': 238px,
+                            '117': 117.5px,
+                        
+                        )
+                    )
+            )
+        )
+    )
+);
+
+// max-width
+
+$utilities: map-merge(
+    $utilities,
+    (
+       'max-width':
+        map-merge(
+            map-get($utilities, 'max-width'),
+            (
+                responsive: true,
+                values: 
+                    map-merge(
+                        map-get(map-get($utilities, 'max-width'), 'values'),
+                        (
+                            '1000': 1000px,
+                            '420': 420px,
+                            '900': 900px,
+                            '90': 90px,
+                        )
+                    )
+            )
+        )
+    )
+);
+
+// max-height
+
+$utilities: map-merge(
+    $utilities,
+    (
+       'max-height':
+        map-merge(
+            map-get($utilities, 'max-height'),
+            (
+                responsive: true,
+                values: 
+                    map-merge(
+                        map-get(map-get($utilities, 'max-height'), 'values'),
+                        (
+                            '235': 235px,
+                            '114': 113.5px
+                        )
+                    )
+            )
+        )
+    )
+);
+// width
+
+$utilities: map-merge(
+    $utilities,
+    (
+       'width':
+        map-merge(
+            map-get($utilities, 'width'),
+            (
+                responsive: true,
+                values: 
+                    map-merge(
+                        map-get(map-get($utilities, 'width'), 'values'),
+                        (
+                            '400': 400px,
+                            '900': 900px,
+                            '320': 320px,
+                            '40': 40%,
+                            '30': 30%,
+                            '20': 20%,
+                            '10': 10%
+                        )
+                    )
+            )
+        ),
+    )
+);
+
+
+
+@import "../node_modules/bootstrap/scss/mixins";
+
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+
 @import "~bootstrap/scss/bootstrap";
